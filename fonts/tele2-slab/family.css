@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Tele2 Slab1";
+  src: url("./Tele2SlabWeb-Heavy.eot"); /* IE9 Compat Modes */
+  src: url("./Tele2SlabWeb-Heavy.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./Tele2SlabWeb-Heavy.otf") format("opentype"),
+    /* Open Type Font */ url("./Tele2SlabWeb-Heavy.svg") format("svg"),
+    /* Legacy iOS */ url("./Tele2SlabWeb-Heavy.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./Tele2SlabWeb-Heavy.woff") format("woff"),
+    /* Modern Browsers */ url("./Tele2SlabWeb-Heavy.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tele2 Slab2";
+  src: url("./Tele2SlabWeb-Bold.eot"); /* IE9 Compat Modes */
+  src: url("./Tele2SlabWeb-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./Tele2SlabWeb-Bold.otf") format("opentype"),
+    /* Open Type Font */ url("./Tele2SlabWeb-Bold.svg") format("svg"),
+    /* Legacy iOS */ url("./Tele2SlabWeb-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./Tele2SlabWeb-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("./Tele2SlabWeb-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Tele2 Slab3";
+  src: url("./Tele2SlabWeb-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./Tele2SlabWeb-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./Tele2SlabWeb-Regular.otf") format("opentype"),
+    /* Open Type Font */ url("./Tele2SlabWeb-Regular.svg") format("svg"),
+    /* Legacy iOS */ url("./Tele2SlabWeb-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./Tele2SlabWeb-Regular.woff") format("woff"),
+    /* Modern Browsers */ url("./Tele2SlabWeb-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 500;
+  font-style: normal;
+}

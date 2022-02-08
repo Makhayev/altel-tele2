@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replenishment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="/altele2Redirect/fonts/tele2-slab/family.css"
+    />
+    <style>
+      @font-face {
+        font-family: "Tele2 Slab1";
+        src: url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.eot"); /* IE9 Compat Modes */
+        src: url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.otf")
+            format("opentype"),
+          /* Open Type Font */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.svg")
+            format("svg"),
+          /* Legacy iOS */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.ttf")
+            format("truetype"),
+          /* Safari, Android, iOS */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.woff")
+            format("woff"),
+          /* Modern Browsers */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Heavy.woff2")
+            format("woff2"); /* Modern Browsers */
+        font-weight: 900;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Tele2 Slab2";
+        src: url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.eot"); /* IE9 Compat Modes */
+        src: url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.otf")
+            format("opentype"),
+          /* Open Type Font */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.svg")
+            format("svg"),
+          /* Legacy iOS */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.ttf")
+            format("truetype"),
+          /* Safari, Android, iOS */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.woff")
+            format("woff"),
+          /* Modern Browsers */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Bold.woff2")
+            format("woff2"); /* Modern Browsers */
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Tele2 Slab3";
+        src: url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.eot"); /* IE9 Compat Modes */
+        src: url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.otf")
+            format("opentype"),
+          /* Open Type Font */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.svg")
+            format("svg"),
+          /* Legacy iOS */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.ttf")
+            format("truetype"),
+          /* Safari, Android, iOS */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.woff")
+            format("woff"),
+          /* Modern Browsers */
+            url("/altele2Redirect/fonts/tele2-slab/Tele2SlabWeb-Regular.woff2")
+            format("woff2"); /* Modern Browsers */
+        font-weight: 500;
+        font-style: normal;
+      }
+      .general {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40vh;
+        font-size: 2em;
+        visibility: visible;
+        text-align: center;
+        font-family: "Tele2 Slab3", "Tele2 Slab2", "Tele2 Slab1", "Roboto Slab";
+      }
+    </style>
+    <script defer>
+      let params = new URL(document.location).searchParams;
+      let lang = params.get("lang");
+      let status = params.get("status");
+      let type = params.get("type");
+      console.log(lang, status, type);
+      window.onload = () => {
+        if (status == "success") {
+          if (lang == "ru") {
+            if (type == "save") {
+              document.querySelector("#saveTextRu").style.display = "flex";
+            } else {
+              document.querySelector("#payTextRu").style.display = "flex";
+            }
+          } else if (lang == "en") {
+            if (type == "save") {
+              document.querySelector("#saveTextEn").style.display = "flex";
+            } else {
+              document.querySelector("#payTextEn").style.display = "flex";
+            }
+          } else {
+            if (type == "save") {
+              document.querySelector("#saveTextKz").style.display = "flex";
+            } else {
+              document.querySelector("#payTextKz").style.display = "flex";
+            }
+          }
+        } else {
+          if (lang == "ru") {
+            document.querySelector("#failureTextRu").style.display = "flex";
+          } else if (lang == "en") {
+            document.querySelector("#failureTextEn").style.display = "flex";
+          } else {
+            document.querySelector("#failureTextKz").style.display = "flex";
+          }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="payTextRu" class="general">Ваша карта не будет сохранена</div>
+    <div id="payTextEn" class="general">Your card will not be saved</div>
+    <div id="payTextKz" class="general">
+      Төлемнен кейін картаңыз сақталынбайды
+    </div>
+    <div id="failureTextRu" class="general">Произошла ошибка</div>
+    <div id="failureTextEn" class="general">Error occured</div>
+    <div id="failureTextKz" class="general">Қателік орын aлды</div>
+    <div id="saveTextRu" class="general">
+      Ваша карта будет сохранена после успешной оплаты
+    </div>
+    <div id="saveTextEn" class="general">
+      Your card will be saved after the successful payment
+    </div>
+    <div id="saveTextKz" class="general">Төлемнен кейін картаңыз сақталады</div>
+  </body>
+</html>
